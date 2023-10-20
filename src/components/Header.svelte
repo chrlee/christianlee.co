@@ -9,9 +9,6 @@
 <style>
 	.header {
 		font-size: xx-large;
-		@media screen and (min-width: 1024px) {
-			font-size: xxx-large;
-		}
 	}
 	.firstName {
 		font-weight: 400;
