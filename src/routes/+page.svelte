@@ -5,7 +5,7 @@
 	<a href="https://perlin-noise.com">perlin noise</a>.
 </p>
 <p>
-	And also been featured on <a
+	And also been featured for my fashion work on <a
 		href="https://www.grailed.com/drycleanonly/seller-spotlight-designer-experts">Grailed</a
 	>
 	&
@@ -14,13 +14,27 @@
 		>WWD</a
 	>.
 </p>
-
-<p>Currently, I'm:</p>
+<br />
+<span><h2 class="inline">Currently</h2><p class="inline">, I'm...</p></span>
 <ul>
 	<li>Developing websites for Amazon</li>
 </ul>
-
+<br />
 <p>
 	If you'd like to get in touch, feel free to <a href="mailto:christianjslee@gmail.com">reach out</a
 	>.
 </p>
+
+<style>
+    a {
+        color: #FF6B6B
+    }
+
+    h2 {
+        font-size: large;
+    }
+
+    .inline {
+        display: inline;
+    }
+</style>
