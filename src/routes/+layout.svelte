@@ -1,7 +1,11 @@
 <script>
 	import Footer from '../components/Footer.svelte';
-import Head from '../components/Head.svelte';
+  import Head from '../components/Head.svelte';
 	import Header from '../components/Header.svelte';
+  import { dev } from '$app/environment';
+  import { inject } from '@vercel/analytics';
+
+  inject({ mode: dev ? 'development' : 'production' });
 </script>
 
 <Head title={'Christian Lee'} />
@@ -19,9 +23,9 @@ import Head from '../components/Head.svelte';
 <style>
 	@import '../reset.css';
 
-    :global(html) {
-        height: 100%;
-    }
+  :global(html) {
+      height: 100%;
+  }
 	:global(body) {
 		font-family: Montserrat, Helvetica, sans-serif;
 		color: #444;
@@ -33,10 +37,10 @@ import Head from '../components/Head.svelte';
 		padding: 10px;
 		max-width: 1024px;
 	}
-    main {
-        flex-grow: 1;
-        height: 100%;
-    }
+  main {
+      flex-grow: 1;
+      height: 100%;
+  }
     
 	.pageWrapper {
 		display: flex;
