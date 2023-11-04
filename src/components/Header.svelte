@@ -59,7 +59,7 @@
     grid-area: select;
   }
   nav::after {
-    content: url("svg/caret-down-filled.svg");
+    content: url("/svg/caret-down-filled.svg");
     color: darkgray;
     justify-self: end;
   }
