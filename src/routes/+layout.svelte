@@ -4,15 +4,21 @@
 	import Header from '../components/Header.svelte';
   import { dev } from '$app/environment';
   import { inject } from '@vercel/analytics';
+	import { onMount } from 'svelte';
 
   inject({ mode: dev ? 'development' : 'production' });
+
+  let currentPath = '';
+  onMount(() => {
+    currentPath = window.location.pathname.replace('/', '');
+  })
 </script>
 
 <Head title={'Christian Lee'} />
 
 <div class="pageWrapper">
 	<section class="topNav">
-		<Header />
+		<Header currentPath={currentPath} />
 	</section>
 	<main class="pageContent">
 		<slot />
