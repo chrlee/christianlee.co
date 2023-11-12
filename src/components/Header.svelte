@@ -28,6 +28,10 @@
   }
   h1 {
     white-space-collapse: discard;
+    font-size: x-large;
+    @media (min-width: 600px) {
+      font-size: xx-large;
+    }
   }
   nav {
     display: grid;
@@ -45,11 +49,15 @@
     color: darkgray;
     cursor: pointer;
 
-    font-size: xx-large;
+    font-size: x-large;
     font-weight: 200;
     line-height: 1.4;
 
     z-index: 1;
+
+    @media (min-width: 600px) {
+      font-size: xx-large;
+    }
   }
   select::-ms-expand {
     display: none;
@@ -64,13 +72,13 @@
     justify-self: end;
   }
   option {
-    font-size: xx-large;
+    font-size: x-large;
     font-weight: 200;
     color: darkgray;
+    @media (min-width: 600px) {
+      font-size: xx-large;
+    }
   }
-  .header {
-		font-size: xx-large;
-	}
 	.firstName {
 		font-weight: 400;
 	}

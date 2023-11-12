@@ -8,13 +8,13 @@
 
   inject({ mode: dev ? 'development' : 'production' });
 
-  let currentPath = '';
+  $: currentPath = '';
   onMount(() => {
     currentPath = window.location.pathname.replace('/', '');
   })
 </script>
 
-<Head title={'Christian Lee'} />
+<Head title={currentPath || 'home'} />
 
 <div class="pageWrapper">
 	<section class="topNav">
@@ -31,6 +31,7 @@
 
   :global(html) {
       height: 100%;
+      width: 100%;
   }
 	:global(body) {
 		font-family: Montserrat, Helvetica, sans-serif;
