@@ -5,10 +5,21 @@
   import { dev } from '$app/environment';
   import { inject } from '@vercel/analytics';
 	import { onMount } from 'svelte';
+  import { fade } from 'svelte/transition';
+	import { cubicIn, cubicOut } from 'svelte/easing';
 
   inject({ mode: dev ? 'development' : 'production' });
 
-  $: currentPath = '';
+  export let data;
+
+  const duration = 300;
+	const delay = duration + 100;
+	const y = 10;
+
+	const transitionIn = { easing: cubicOut, y, duration, delay };
+	const transitionOut = { easing: cubicIn, y: -y, duration };
+
+  $: currentPath = data.pathname.replace('/', '');
   onMount(() => {
     currentPath = window.location.pathname.replace('/', '');
   })
@@ -20,10 +31,12 @@
 	<section class="topNav">
 		<Header currentPath={currentPath} />
 	</section>
-	<main class="pageContent">
-		<slot />
-	</main>
-    <Footer />
+  {#key currentPath}
+    <main in:fade={transitionIn} out:fade={transitionOut} class="pageContent">
+      <slot />
+    </main>
+  {/key}
+  <Footer />
 </div>
 
 <style>
@@ -37,7 +50,7 @@
 		font-family: Montserrat, Helvetica, sans-serif;
 		color: #444;
 		background-color: #eee;
-        height: 100%;
+    height: 100%;
 		line-height: 1.6;
 		font-size: large;
 		margin: 0 auto;
@@ -45,16 +58,16 @@
 		max-width: 1024px;
 	}
   main {
-      flex-grow: 1;
-      height: 100%;
+    flex-grow: 1;
+    height: 100%;
   }
     
 	.pageWrapper {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-        width: 100%;
-        height: 100%;
+    width: 100%;
+    height: 100%;
 		gap: 1rem;
 		padding: 1rem;
 	}
