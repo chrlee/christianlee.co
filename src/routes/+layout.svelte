@@ -7,6 +7,9 @@
 	import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
 	import { cubicIn, cubicOut } from 'svelte/easing';
+  import { T, Canvas } from '@threlte/core';
+	import Star from '$lib/star.svelte';
+	import { OrbitControls } from '@threlte/extras';
 
   inject({ mode: dev ? 'development' : 'production' });
 
@@ -28,6 +31,21 @@
 <Head title={currentPath || 'home'} />
 
 <div class="pageWrapper">
+
+  <section class="logo">
+    <Canvas>
+     <T.PerspectiveCamera
+    makeDefault
+    position={[3, 0, 3]}
+      > 
+      <OrbitControls enableDamping autoRotate autoRotateSpeed={10} enableZoom={false} enablePan={false} />
+     </T.PerspectiveCamera>
+     <T.AmbientLight />
+    <T.DirectionalLight position={[10, 10, 10]} castShadow /> 
+     <T.DirectionalLight position={[-10, 10, -10]} castShadow />
+     <Star /> 
+    </Canvas>
+  </section>
 	<section class="topNav">
 		<Header currentPath={currentPath} />
 	</section>
@@ -49,7 +67,7 @@
 	:global(body) {
 		font-family: Montserrat, Helvetica, sans-serif;
 		color: #444;
-		background-color: #eee;
+		background-color: #222;
     height: 100%;
 		line-height: 1.6;
 		font-size: large;
@@ -74,7 +92,10 @@
 	.topNav {
 		width: 100%;
 	}
-
+  .logo {
+    width: 100%;
+    height: 20vh;
+  }
 	.pageContent {
 		width: 100%;
 	}
