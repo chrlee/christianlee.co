@@ -15,11 +15,14 @@
 	>.
 </p>
 <br />
-<span><h2 class="inline">Currently</h2><p class="inline">, I'm...</p></span>
+<span
+	><h2 class="inline">Currently</h2>
+	<p class="inline">, I'm...</p></span
+>
 <ul>
 	<li>Developing websites for Amazon</li>
-  <li>Learning a bit of Rust</li>
-  <li>Working on some music production projects</li>
+	<li>Learning a bit of Rust</li>
+	<li>Working on some music production projects</li>
 </ul>
 <br />
 <p>
@@ -28,19 +31,18 @@
 </p>
 
 <style>
-    :global(h2, ul, p, a) {
-        font-size: medium;
-        @media (min-width: 600px) {
-            font-size: large;
-        }
-    }
+	:global(h2, ul, p, a) {
+		font-size: medium;
+		@media (min-width: 600px) {
+			font-size: large;
+		}
+	}
 
-    a {
-        color: #FF6B6B
-    }
+	a {
+		color: #ff6b6b;
+	}
 
-
-    .inline {
-        display: inline;
-    }
+	.inline {
+		display: inline;
+	}
 </style>

@@ -1,5 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
-import { vitePreprocess } from '@sveltejs/kit/vite';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 
 export default {
@@ -12,13 +12,16 @@ export default {
 			fallback: undefined,
 			precompress: false,
 			strict: true
-		})
+		}),
+    prerender: {
+      handleHttpError: 'warn',
+    }
 	},
-  extensions: ['.svelte', '.md'],
+	extensions: ['.svelte', '.md'],
 	preprocess: [
-    vitePreprocess(),
-    mdsvex({
-      extensions: ['.md'],
-    })
-  ]
+		vitePreprocess(),
+		mdsvex({
+			extensions: ['.md']
+		})
+	]
 };

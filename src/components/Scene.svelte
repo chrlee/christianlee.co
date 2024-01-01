@@ -1,27 +1,22 @@
 <script>
-  import { T, useFrame } from '@threlte/core'
-  import { spring } from 'svelte/motion'
-  const scale = spring(1)
-  let rotation = 0
-  useFrame((state, delta) => {
-    rotation += delta
-  })
+	import { T, Canvas } from '@threlte/core';
+	import Star from '$lib/star.svelte';
+  import { OrbitControls } from '@threlte/extras';
 </script>
-<T.PerspectiveCamera
-  makeDefault
-  position={[10, 10, 10]}
-  on:create={({ ref }) => {
-    ref.lookAt(0, 1, 0)
-  }}
-/>
-<T.DirectionalLight position={[0, 10, 10]} />
-<T.Mesh
-  rotation.y={rotation}
-  position.y={1}
-  scale={$scale}
-  on:pointerenter={() => scale.set(1.5)}
-  on:pointerleave={() => scale.set(1)}
->
-  <T.BoxGeometry args={[1, 2, 1]} />
-  <T.MeshStandardMaterial color="hotpink" />
-</T.Mesh>
+
+<Canvas>
+	<T.PerspectiveCamera makeDefault position={[3, 0, 3]}>
+    <OrbitControls
+      target={[0, 0, 0]}
+      enableZoom={false}
+      enableDamping
+      enablePan={false}
+      autoRotate
+      autoRotateSpeed={10}
+    />
+	</T.PerspectiveCamera>
+	<T.AmbientLight />
+	<T.DirectionalLight position={[10, 10, 10]} castShadow />
+	<T.DirectionalLight position={[-10, 10, -10]} castShadow />
+	<Star />
+</Canvas>
