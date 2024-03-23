@@ -1,7 +1,6 @@
 <script>
 	import Footer from '../components/Footer.svelte';
 	import Head from '../components/Head.svelte';
-	import Header from '../components/Header.svelte';
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
 	import { onMount } from 'svelte';
@@ -32,9 +31,6 @@
 	<section class="logo">
 		<Scene />
 	</section>
-	<section class="topNav">
-		<Header {currentPath} />
-	</section>
 	{#key currentPath}
 		<main in:fade={transitionIn} out:fade={transitionOut} class="pageContent">
 			<slot />
@@ -53,12 +49,11 @@
 	:global(body) {
 		font-family: Montserrat, Helvetica, sans-serif;
 		color: #444;
-		background-color: #222;
+		background-color: #EEE;
 		height: 100%;
 		line-height: 1.6;
 		font-size: large;
 		margin: 0 auto;
-		padding: 10px;
 		max-width: 1024px;
 	}
 	main {
@@ -74,9 +69,6 @@
 		height: 100%;
 		gap: 1rem;
 		padding: 1rem;
-	}
-	.topNav {
-		width: 100%;
 	}
 	.logo {
 		width: 100%;
