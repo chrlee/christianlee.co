@@ -28,9 +28,6 @@
 <Head title={currentPath || 'home'} />
 
 <div class="pageWrapper">
-	<section class="logo">
-		<Scene />
-	</section>
 	{#key currentPath}
 		<main in:fade={transitionIn} out:fade={transitionOut} class="pageContent">
 			<slot />
@@ -48,7 +45,7 @@
 	}
 	:global(body) {
 		font-family: Montserrat, Helvetica, sans-serif;
-		color: #444;
+		color: #222;
 		background-color: #EEE;
 		height: 100%;
 		line-height: 1.6;
@@ -69,10 +66,6 @@
 		height: 100%;
 		gap: 1rem;
 		padding: 1rem;
-	}
-	.logo {
-		width: 100%;
-		height: 20vh;
 	}
 	.pageContent {
 		width: 100%;
