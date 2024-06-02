@@ -1,14 +1,10 @@
 <script>
 	import Footer from '../components/Footer.svelte';
 	import Head from '../components/Head.svelte';
-	import { dev } from '$app/environment';
-	import { inject } from '@vercel/analytics';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { cubicIn, cubicOut } from 'svelte/easing';
 	import Scene from '../components/Scene.svelte';
-
-	inject({ mode: dev ? 'development' : 'production' });
 
 	export let data;
 
@@ -28,12 +24,17 @@
 <Head title={currentPath || 'home'} />
 
 <div class="pageWrapper">
-	{#key currentPath}
-		<main in:fade={transitionIn} out:fade={transitionOut} class="pageContent">
-			<slot />
-		</main>
-	{/key}
-	<Footer />
+  <div class="pageContent">
+    {#key currentPath}
+      <main in:fade={transitionIn} out:fade={transitionOut} class="pageMain">
+        <slot />
+      </main>
+    {/key}
+    <div>
+      <Scene />
+    </div>
+    <Footer />
+  </div>
 </div>
 
 <style>
@@ -55,7 +56,7 @@
   }
 
 	:global(html) {
-		height: 100%;
+    height: 100%;
 		width: 100%;
 	}
 	:global(body) {
@@ -63,11 +64,11 @@
     letter-spacing: 1px;
 		color: #222;
 		background-color: #EEE;
-		height: 100%;
+    width: 100%;
+		min-height: 100%; 
 		line-height: 1.4;
 		font-size: medium;
-		margin: 0 auto;
-		max-width: 1024px;
+    margin: 0;
 	}
   :global(h2, h3) {
     text-transform: uppercase;
@@ -75,20 +76,20 @@
   }
 	main {
 		flex-grow: 1;
-		height: 100%;
+    height: max-content;
 	}
 
 	.pageWrapper {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
+    position: absolute;
+    width: 100%;
 		height: 100%;
-		gap: 1rem;
-		padding: 1rem;
 	}
-	.pageContent {
-		width: 100%;
-
-	}
+  .pageContent {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 1rem;
+    max-width: 1024px;
+  }
 </style>

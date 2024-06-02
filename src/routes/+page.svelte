@@ -1,3 +1,7 @@
+<script>
+	import Scene from "../components/Scene.svelte";
+
+</script>
 <h2>Selected Work</h2>
 
 <h3>Current</h3>
