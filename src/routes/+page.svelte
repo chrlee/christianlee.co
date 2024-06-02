@@ -1,22 +1,19 @@
-<h2>Work</h2>
+<h2>Selected Work</h2>
 
-<br />
-
-<h3 class="inline">Currently</h3>,
-<p class="inline">I'm...</p>
+<h3>Current</h3>
 
 <p>Developing shopping experiences at <a href="https://shopbop.com/" rel="nofollow">Shopbop</a>, an Amazon subsidiary focused on luxury fashion e-commerce</p> 
 <p>& working on new ways to use technology to help connect with and invest in artists.</p>
 
 <br />
 
-<h3 class="inline">Previously</h3>,
-<p class="inline">I've...</p>
+<h3>Previous</h3>
+
 <p>
   Re-designed the HackerNews UI and API using GraphQL and Svelte: <a href="https://hkr.news">hkr.news</a>
 </p>
 <p>
-  Run an online clothing store cetnered around rare, archival menswear: <a href="https://perlin-noise.com">perlin noise</a>
+  Run an online clothing store centered around rare, archival menswear: <a href="https://perlin-noise.com">perlin noise</a>
 </p>
 <p>
   & also been featured for my fashion work on <a
@@ -35,18 +32,10 @@
 </p>
 
 <style>
-	:global(h2, h3, ul, p, a) {
-		font-size: medium;
-		@media (min-width: 600px) {
-			font-size: large;
-		}
-	}
-
 	a {
-		color: #ff6b6b;
-	}
-
-	.inline {
-		display: inline;
+		color: #222;
+    &:hover {
+     color: #00E;
+    }
 	}
 </style>

@@ -32,7 +32,7 @@ Command: npx @threlte/gltf@2.0.0 star.glb --transform --types
   {:then gltf}
     <T.Group scale={0.1}>
       <T.Mesh geometry={gltf.nodes.star1_Mat_0.geometry} scale={0.07} rotation={[0, 0, Math.PI / 4]} castShadow>
-        <T.MeshStandardMaterial color="hotpink" roughness={0} />
+        <T.MeshStandardMaterial color="gray" roughness={0}/>
       </T.Mesh>
     </T.Group>
   {:catch error}

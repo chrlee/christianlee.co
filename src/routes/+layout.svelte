@@ -38,21 +38,41 @@
 
 <style>
 	@import '../reset.css';
+  
+  @font-face {
+    font-family: NeueHaasGroteskRegular;
+    src: url('fonts/NeueHaasGroteskRegular.ttf');
+  }
+
+  @font-face {
+    font-family: NeueHaasGroteskMedium;
+    src: url('fonts/NeueHaasGroteskMedium.ttf');
+  }
+
+  @font-face {
+    font-family: NeueHaasGroteskBold;
+    src: url('fonts/NeueHaasGroteskBold.ttf');
+  }
 
 	:global(html) {
 		height: 100%;
 		width: 100%;
 	}
 	:global(body) {
-		font-family: Montserrat, Helvetica, sans-serif;
+		font-family: NeueHaasGroteskRegular, Helvetica, sans-serif;
+    letter-spacing: 1px;
 		color: #222;
 		background-color: #EEE;
 		height: 100%;
-		line-height: 1.6;
-		font-size: large;
+		line-height: 1.4;
+		font-size: medium;
 		margin: 0 auto;
 		max-width: 1024px;
 	}
+  :global(h2, h3) {
+    text-transform: uppercase;
+    font-family: NeueHaasGroteskMedium, Helvetica, sans-serif;
+  }
 	main {
 		flex-grow: 1;
 		height: 100%;
@@ -69,5 +89,6 @@
 	}
 	.pageContent {
 		width: 100%;
+
 	}
 </style>
