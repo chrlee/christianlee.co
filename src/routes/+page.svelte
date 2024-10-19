@@ -1,5 +1,7 @@
 <script>
+	import { Canvas } from "@threlte/core";
 	import Scene from "../components/Scene.svelte";
+
 
 </script>
 <h2>Selected Work</h2>
@@ -34,6 +36,12 @@
 	If you'd like to get in touch, feel free to <a href="mailto:christianjslee@gmail.com">reach out</a
 	>.
 </p>
+
+<div>
+  <Canvas>
+    <Scene />
+  </Canvas>
+</div>
 
 <style>
 	a {

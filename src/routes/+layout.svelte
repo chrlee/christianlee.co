@@ -4,7 +4,6 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { cubicIn, cubicOut } from 'svelte/easing';
-	import Scene from '../components/Scene.svelte';
 
 	export let data;
 
@@ -30,9 +29,6 @@
         <slot />
       </main>
     {/key}
-    <div>
-      <Scene />
-    </div>
     <Footer />
   </div>
 </div>
