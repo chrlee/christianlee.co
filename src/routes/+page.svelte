@@ -33,8 +33,6 @@
   </li>
 </ul>
 
-<br />
-
 <p>
 	If you'd like to get in touch, feel free to <a href="mailto:christianjslee@gmail.com">reach out</a
 	>.
