@@ -8,28 +8,46 @@
 
 <h3>Current</h3>
 
-<p>Developing shopping experiences at <a href="https://shopbop.com/" rel="nofollow">Shopbop</a>, an Amazon subsidiary focused on luxury fashion e-commerce</p> 
+<ul>
+  <li>
+    Developing shopping experiences at <a
+      href="https://shopbop.com/"
+      rel="nofollow"
+      target="_blank">Shopbop</a>, an Amazon subsidiary focused on luxury fashion e-commerce
+  </li>
+  <li>
+    Collecting and selling <a
+      href="https://perlin-noise.com/"
+      rel="nofollow"
+      target="_blank"
+    >
+      rare, archival menswear
+    </a>
+  </li>
+</ul>
 
 <h3>Previous</h3>
 <ul>
   <li>
     Featured for my fashion work on <a
-      href="https://www.grailed.com/drycleanonly/seller-spotlight-designer-experts">Grailed</a
-    >
-    &
-    <a
+      href="https://www.grailed.com/drycleanonly/seller-spotlight-designer-experts"
+      target="_blank"
+    >Grailed</a> & <a
       href="https://wwd.com/menswear-news/mens-fashion/new-york-mens-day-fall-2023-details-1235515836/"
-      >WWD</a
-    >.
+      target="_blank"
+    >WWD</a>.
   </li>
   <li>
-    Run an <a href="https://perlin-noise.com">online clothing store</a> centered around rare, archival menswear
+    Created a showcase of <a
+      href="https://noise-console.vercel.app"
+      target="_blank"
+    >mathematical noise visualizations</a> in multiple dimensions
   </li>
   <li>
-    Showcased <a href="https://noise-console.vercel.app">mathematical noise visualizations</a> in multiple dimensions
-  </li>
-  <li>
-    Re-created the <a href="https://hkr.news">HackerNews UI and API using GraphQL and Svelte</a>
+    Re-created the <a
+      href="https://hkr.news"
+      target="_blank"
+    >HackerNews UI and API using GraphQL and Svelte</a>
   </li>
 </ul>
 
