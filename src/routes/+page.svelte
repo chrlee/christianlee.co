@@ -1,11 +1,42 @@
 <script>
 	import { Canvas } from "@threlte/core";
 	import Scene from "../components/Scene.svelte";
+  import PortfolioGrid from '../components/PortfolioGrid.svelte';
+  import ShopbopLogo from '$lib/assets/Shopbop_Logo_RGB_Black.jpg';
+  import PnLogo from '$lib/assets/Perlin_Noise_Logo.png';
+  import AmazonLogo from '$lib/assets/Amazon_Logo.png';
 
-
+  const portfolioProjects = [
+    {
+      title: "Shopbop",
+      description: "GraphQL and Svelte implementation of Hacker News",
+      imageUrl: ShopbopLogo,
+      linkUrl: "/shopbop",
+    },
+    {
+      title: "Amazon",
+      description: "Interactive 3D data visualization using ThreeJS and Svelte",
+      imageUrl: AmazonLogo,
+      linkUrl: "https://github.com/yourusername/3d-viz",
+    },
+    {
+      title: "perlin noise",
+      description: "Personal portfolio site built with SvelteKit",
+      imageUrl: PnLogo,
+      linkUrl: "https://github.com/yourusername/portfolio",
+    },
+    {
+      title: "Noise Console",
+      description: "Personal portfolio site built with SvelteKit",
+      imageUrl: PnLogo,
+      linkUrl: "https://github.com/yourusername/portfolio",
+    }
+  ];
 </script>
-<h2>Selected Work</h2>
 
+<h1>christian lee</h1>
+
+<!--<PortfolioGrid projects={portfolioProjects} />-->
 <h3>Current</h3>
 
 <ul>
@@ -50,6 +81,8 @@
     >HackerNews UI and API using GraphQL and Svelte</a>
   </li>
 </ul>
+
+<br />
 
 <p>
 	If you'd like to get in touch, feel free to <a href="mailto:christianjslee@gmail.com">reach out</a

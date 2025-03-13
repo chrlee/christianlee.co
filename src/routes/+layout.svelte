@@ -38,17 +38,17 @@
   
   @font-face {
     font-family: NeueHaasGroteskLight;
-    src: url('fonts/NeueHaasGroteskDisplayLight.otf');
+    src: url('../fonts/NeueHaasGroteskDisplayLight.otf');
   }
 
   @font-face {
     font-family: NeueHaasGroteskRegular;
-    src: url('fonts/NeueHaasGroteskRegular.ttf');
+    src: url('../fonts/NeueHaasGroteskRegular.ttf');
   }
 
   @font-face {
     font-family: NeueHaasGroteskMedium;
-    src: url('fonts/NeueHaasGroteskMedium.ttf');
+    src: url('../fonts/NeueHaasGroteskMedium.ttf');
   }
 
 	:global(html) {
@@ -66,9 +66,9 @@
 		font-size: medium;
     margin: 0;
 	}
-  :global(h2, h3) {
-    text-transform: uppercase;
+  :global(h1, h2, h3) {
     font-family: NeueHaasGroteskRegular, Helvetica, sans-serif;
+    letter-spacing: 2px;
   }
 	main {
 		flex-grow: 1;

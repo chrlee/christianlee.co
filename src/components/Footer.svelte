@@ -6,8 +6,10 @@
 
 <style>
 	footer {
-    display: flex;
+		display: flex;
 		width: 100%;
-    margin-bottom: 1rem;
+	}
+	a {
+		margin: 1rem 0;
 	}
 </style>
