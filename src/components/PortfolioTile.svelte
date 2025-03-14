@@ -43,9 +43,6 @@
           {/each}
         </div>
       {/if}
-      <span class="visually-hidden">
-        {isExternalLink ? 'External link' : 'View project'}
-      </span>
     </div>
   </a>
 </div>
@@ -104,15 +101,14 @@
     width: 100%;
     aspect-ratio: var(--aspect-ratio);
     overflow: hidden;
-    flex: 0 0 auto;
   }
 
   img {
-    width: 100%;
-    height: 100%;
+    width: 85%;
+    height: 85%;
     object-fit: contain;
     transition: transform 0.5s ease;
-    margin: 1rem;
+    margin: auto;
   }
 
   .tile:hover img {
@@ -153,17 +149,5 @@
     padding: 0.25rem 0.5rem;
     border-radius: 3px;
     color: #555;
-  }
-  
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
   }
 </style>
