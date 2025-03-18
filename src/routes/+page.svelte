@@ -6,6 +6,7 @@
   import PnLogo from '$lib/assets/Perlin_Noise_Logo.png';
   import AmazonLogo from '$lib/assets/Amazon_Logo.png';
   import NoiseConsoleLogo from '$lib/assets/Noise_Console_Logo.png';
+	import Footer from "../components/Footer.svelte";
 
   const portfolioProjects = [
     {
@@ -44,11 +45,7 @@
 	>.
 </p>
 
-<div>
-  <Canvas>
-    <Scene />
-  </Canvas>
-</div>
+<Footer />
 
 <style>
 	a {

@@ -1,5 +1,4 @@
 <script>
-	import Footer from '../components/Footer.svelte';
 	import Head from '../components/Head.svelte';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
@@ -29,7 +28,6 @@
         <slot />
       </main>
     {/key}
-    <Footer />
   </div>
 </div>
 
