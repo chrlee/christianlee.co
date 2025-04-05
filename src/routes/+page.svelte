@@ -2,10 +2,10 @@
 	import { Canvas } from "@threlte/core";
 	import Scene from "../components/Scene.svelte";
   import PortfolioGrid from '../components/PortfolioGrid.svelte';
-  import ShopbopLogo from '$lib/assets/Shopbop_Logo_RGB_Black.jpg';
-  import PnLogo from '$lib/assets/Perlin_Noise_Logo.png';
-  import AmazonLogo from '$lib/assets/Amazon_Logo.png';
-  import NoiseConsoleLogo from '$lib/assets/Noise_Console_Logo.png';
+  import ShopbopLogo from '$lib/assets/Shopbop.webp';
+  import PnLogo from '$lib/assets/Perlin_Noise.webp';
+  import AmazonLogo from '$lib/assets/Amazon.webp';
+  import NoiseConsoleLogo from '$lib/assets/Noise_Console.webp';
 	import Footer from "../components/Footer.svelte";
 
   const portfolioProjects = [

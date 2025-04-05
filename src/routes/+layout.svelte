@@ -33,7 +33,7 @@
 
 <style>
 	@import '../reset.css';
-  
+
   @font-face {
     font-family: NebulaSansLight;
     src: url('../fonts/NebulaSans-Light.woff2');
@@ -55,7 +55,6 @@
 	}
 	:global(body) {
 		font-family: NebulaSansLight, Helvetica, sans-serif;
-    letter-spacing: 1px;
 		color: #222;
 		background-color: #F9F9F9;
     width: 100%;
@@ -66,7 +65,7 @@
 	}
   :global(h1, h2, h3) {
     font-family: NebulaSansRegular, Helvetica, sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 0.1rem;
   }
 	main {
 		flex-grow: 1;
