@@ -130,7 +130,7 @@
 
   p {
     margin: 0 0 0.75rem 0;
-    font-family: NeueHaasGroteskLight, Helvetica, sans-serif;
+    font-family: NebulaSansLight, Helvetica, sans-serif;
     font-size: 0.9rem;
     opacity: 0.8;
     flex-grow: 1;

@@ -115,7 +115,7 @@ const portfolioProjects = [
       margin: 0 0 1.5rem 0;
       opacity: 0.8;
       font-weight: normal;
-      font-family: NeueHaasGroteskLight, Helvetica, sans-serif;
+      font-family: NebulaSansLight, Helvetica, sans-serif;
     }
     
     .intro-text p {

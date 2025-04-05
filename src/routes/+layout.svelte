@@ -35,18 +35,18 @@
 	@import '../reset.css';
   
   @font-face {
-    font-family: NeueHaasGroteskLight;
-    src: url('../fonts/NeueHaasGroteskDisplayLight.otf');
+    font-family: NebulaSansLight;
+    src: url('../fonts/NebulaSans-Light.woff2');
   }
 
   @font-face {
-    font-family: NeueHaasGroteskRegular;
-    src: url('../fonts/NeueHaasGroteskRegular.ttf');
+    font-family: NebulaSansRegular;
+    src: url('../fonts/NebulaSans-Medium.woff2');
   }
 
   @font-face {
-    font-family: NeueHaasGroteskMedium;
-    src: url('../fonts/NeueHaasGroteskMedium.ttf');
+    font-family: NebulaSansBold;
+    src: url('../fonts/NebulaSans-Semibold.woff2');
   }
 
 	:global(html) {
@@ -54,7 +54,7 @@
 		width: 100%;
 	}
 	:global(body) {
-		font-family: NeueHaasGroteskLight, Helvetica, sans-serif;
+		font-family: NebulaSansLight, Helvetica, sans-serif;
     letter-spacing: 1px;
 		color: #222;
 		background-color: #F9F9F9;
@@ -65,7 +65,7 @@
     margin: 0;
 	}
   :global(h1, h2, h3) {
-    font-family: NeueHaasGroteskRegular, Helvetica, sans-serif;
+    font-family: NebulaSansRegular, Helvetica, sans-serif;
     letter-spacing: 2px;
   }
 	main {
