@@ -1,7 +1,7 @@
 <script lang="ts">
   import PortfolioTile from './PortfolioTile.svelte';
   
-  export let projects = [];
+  export let projects: Project[] = [];
   
   // Define project type to ensure proper typing and property passing
   type Project = {
@@ -41,7 +41,6 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
     width: 100%;
-    margin: 2rem 0;
   }
   
   .portfolio-item {
@@ -49,7 +48,6 @@
     outline: none;
   }
 
-  /* Responsive grid breakpoints */
   @media (min-width: 640px) {
     .portfolio-grid {
       grid-template-columns: repeat(2, 1fr);

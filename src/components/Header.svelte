@@ -1,87 +1,63 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { subHeader } from '$lib/stores/subHeader';
+	import { fade } from 'svelte/transition';
+	import { transitionIn, transitionOut } from '$lib/transitions';
 	export let currentPath: string;
-	const modules = import.meta.glob('/src/routes/*/+page.svelte');
-	const menuItems = Object.keys(modules).map(
-		(item) => item.match(/\/src\/routes\/(.*?)\/\+page\.svelte/)[1]
-	);
+
+	$: atHomepage = currentPath === '';
+
+	const handleHeaderClick = () => {
+		if (!atHomepage) goto('/');
+		subHeader.set('');
+	};
 </script>
 
 <header>
-	<h1 class="header">
-		<span class="name">ChristianLee.co/</span>
-	</h1>
-	<nav>
-		<select class="path" on:input={(event) => goto(`${event.target.value}`)}>
-			<option value="#" disabled selected hidden>{currentPath}</option>
-			<option value="/">home</option>
-			{#each menuItems as item}
-				<option value={item}>{item}</option>
-			{/each}
-		</select>
-	</nav>
+	<div class="headerNav">
+		<h1
+			on:click={handleHeaderClick} 
+			on:keydown={(e) => e.key === 'Enter' && handleHeaderClick()}
+			role={atHomepage ? 'heading' : 'button'}
+			tabindex={atHomepage ? undefined : 0}
+			class:clickable={!atHomepage}
+		>
+			christian lee
+		</h1>
+		{#if $subHeader}
+			<h2 in:fade={transitionIn} out:fade={transitionOut}>
+				{$subHeader}
+			</h2>
+		{/if}
+	</div>
 </header>
 
 <style>
-	header {
-		display: flex;
-		justify-content: center;
-	}
-	h1 {
-		white-space-collapse: discard;
-		font-size: x-large;
-		@media (min-width: 600px) {
-			font-size: xx-large;
-		}
-	}
-	nav {
-		display: grid;
-		grid-template-areas: 'select';
-		position: relative;
-		align-items: baseline;
-	}
-	select {
-		appearance: none;
-		background-color: transparent;
-		border: none;
-		padding: 0 1em 0 0;
+	h2 {
+      font-size: 1.5rem;
+      margin: 0 0 1.5rem 0;
+      opacity: 0.8;
+      font-weight: normal;
+      font-family: NebulaSansLight, Helvetica, sans-serif;
+    }
+
+	h1, h2 {
 		margin: 0;
-		outline: none;
-		color: darkgray;
+	}
+
+	.headerNav {
+		display: flex;
+		align-items: baseline;
+		margin: 1rem 0;
+		gap: 1rem;
+	}
+
+	.clickable {
 		cursor: pointer;
-
-		font-size: x-large;
-		font-weight: 200;
-		line-height: 1.4;
-
-		z-index: 1;
-
-		@media (min-width: 600px) {
-			font-size: xx-large;
-		}
+		transition: color 0.2s ease;
 	}
-	select::-ms-expand {
-		display: none;
-	}
-	select,
-	nav::after {
-		grid-area: select;
-	}
-	nav::after {
-		content: url('/svg/caret-down-filled.svg');
-		color: darkgray;
-		justify-self: end;
-	}
-	option {
-		font-size: x-large;
-		font-weight: 200;
-		color: darkgray;
-		@media (min-width: 600px) {
-			font-size: xx-large;
-		}
-	}
-	.name {
-		color: darkgray;
-		font-weight: 200;
+	
+	.clickable:hover {
+		color: #00E;
 	}
 </style>

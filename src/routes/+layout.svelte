@@ -1,19 +1,15 @@
-<script>
+<script lang="ts">
 	import Head from '../components/Head.svelte';
+  import Header from '../components/Header.svelte';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { cubicIn, cubicOut } from 'svelte/easing';
+  import { transitionIn, transitionOut } from '$lib/transitions';
+	import Footer from '../components/Footer.svelte';
 
 	export let data;
 
-	const duration = 300;
-	const delay = duration + 100;
-	const y = 10;
-
-	const transitionIn = { easing: cubicOut, y, duration, delay };
-	const transitionOut = { easing: cubicIn, y: -y, duration };
-
 	$: currentPath = data.pathname.replace('/', '');
+
 	onMount(() => {
 		currentPath = window.location.pathname.replace('/', '');
 	});
@@ -23,11 +19,13 @@
 
 <div class="pageWrapper">
   <div class="pageContent">
+    <Header currentPath={currentPath}/>
     {#key currentPath}
       <main in:fade={transitionIn} out:fade={transitionOut} class="pageMain">
         <slot />
       </main>
     {/key}
+    <Footer />
   </div>
 </div>
 
@@ -63,10 +61,20 @@
 		font-size: medium;
     margin: 0;
 	}
-  :global(h1, h2, h3) {
+  :global(h1) {
     font-family: NebulaSansRegular, Helvetica, sans-serif;
     letter-spacing: 0.1rem;
   }
+  :global(h2) {
+    font-family: NebulaSansLight, Helvetica, sans-serif;
+    letter-spacing: 0.1rem;
+  }
+  :global(a) {
+		color: #222;
+    &:hover {
+     color: #00E;
+    }
+	}
 	main {
 		flex-grow: 1;
     height: max-content;
