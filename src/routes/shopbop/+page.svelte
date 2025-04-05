@@ -1,7 +1,7 @@
 <!-- src/routes/+page.svelte -->
 <script lang="ts">
 import PortfolioGrid from '../../components/PortfolioGrid.svelte';
-import ShopbopLogo from '$lib/assets/Shopbop_Logo_RGB_Black.jpg';
+import ShopbopLogo from '$lib/assets/Shopbop.webp';
 
 const portfolioProjects = [
     {

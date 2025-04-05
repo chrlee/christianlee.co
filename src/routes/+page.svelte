@@ -1,6 +1,4 @@
 <script>
-	import { Canvas } from "@threlte/core";
-	import Scene from "../components/Scene.svelte";
   import PortfolioGrid from '../components/PortfolioGrid.svelte';
   import ShopbopLogo from '$lib/assets/Shopbop.webp';
   import PnLogo from '$lib/assets/Perlin_Noise.webp';
