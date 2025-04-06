@@ -34,10 +34,10 @@ const portfolioProjects = [
             <p>
                 I joined Shopbop as a frontend engineer in 2022 and have since been able to lead impactful projects as a member of the core shopping experience team.
                 My work has spanned across the Shopbop.com's Homepage, Product Listing Page,
-                Product Detail Page, Designer Index, Cart, and Order pages.
+                Product Detail Page, Designer Index, Cart, and Orders page.
             </p>
             <p>
-                <a href="shopbop.com">Check out and shop on the website here.</a>
+                <a href="shopbop.com" target="_blank" rel="noopener noreferrer">Check out and shop on the website here.</a>
             </p>
         </div>
         <div class="intro-image-container">
