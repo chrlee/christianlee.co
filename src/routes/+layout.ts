@@ -5,6 +5,5 @@ export const load = ({ url }) => {
 
 	return {
 		pathname,
-		subHeader: null,
 	};
 };

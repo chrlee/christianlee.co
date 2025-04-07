@@ -15,7 +15,7 @@
 	});
 </script>
 
-<Head title={currentPath || 'home'} />
+<Head title={currentPath || 'home'} description={currentPath || 'home'}/>
 
 <div class="pageWrapper">
   <div class="pageContent">

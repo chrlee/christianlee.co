@@ -1,18 +1,8 @@
 <script lang="ts">
   import PortfolioTile from './PortfolioTile.svelte';
+  import type { Project } from '$lib/types';
   
   export let projects: Project[] = [];
-  
-  // Define project type to ensure proper typing and property passing
-  type Project = {
-    title: string;
-    description: string;
-    imageUrl: string;
-    linkUrl: string;
-    alt?: string;
-    aspectRatio?: string;
-    tags?: string[];
-  };
 </script>
 
 <section aria-labelledby="portfolio-heading">

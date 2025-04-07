@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Canvas } from "@threlte/core";
 	import Scene from "../components/Scene.svelte";
-	import LinkedinLogo from "$lib/assets/logos/Linkedin.webp"
 </script>
 
 <footer>
