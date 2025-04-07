@@ -2,6 +2,8 @@
   import ShopbopLogo from "$lib/assets/logos/Shopbop.webp";
   import ShopbopPDP from '$lib/assets/projects/Shopbop_PDP.webp';
   import ShopbopDI from '$lib/assets/projects/Shopbop_DI.webp';
+  import ShopbopMH from '$lib/assets/projects/Shopbop_MH.webp';
+  import ShopbopEditorial from '$lib/assets/projects/Shopbop_Editorial.webp';
   import type { Project } from "$lib/types";
   import PortfolioPage from "../../components/PortfolioPage.svelte";
 
@@ -17,6 +19,20 @@
           title: "Designer Index Page",
           description: "Migrated the designers page to a modern React tech stack",
           imageUrl: ShopbopDI,
+          linkUrl: "#", 
+          tags: ["Page Coming Soon"],
+      },
+      {
+          title: "Product Listing Page Mastheads",
+          description: "SEO focused mastheads on product browse pages",
+          imageUrl: ShopbopMH,
+          linkUrl: "#", 
+          tags: ["Page Coming Soon"],
+      },
+      {
+          title: "Homepage Carousels",
+          description: "Editorial product carousels on the homepage",
+          imageUrl: ShopbopEditorial,
           linkUrl: "#", 
           tags: ["Page Coming Soon"],
       },
