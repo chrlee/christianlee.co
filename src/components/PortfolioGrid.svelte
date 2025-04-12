@@ -3,6 +3,7 @@
   import type { Project } from '$lib/types';
   
   export let projects: Project[] = [];
+  export let atf: boolean = false;
 </script>
 
 <section aria-labelledby="portfolio-heading">
@@ -19,6 +20,7 @@
           alt={project.alt || project.title}
           aspectRatio={project.aspectRatio || "4/3"}
           tags={project.tags || []}
+          atf={atf}
         />
       </div>
     {/each}

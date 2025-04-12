@@ -4,31 +4,41 @@
 </script>
 
 <footer>
-	<Canvas>
-		<Scene />
-	</Canvas>
 	<div class="linksContainer">
 		<a href="https://linkedin.com/in/cjle" target="_blank" rel="noopener noreferrer nofollow">
-			<img src="/svg/LinkedIn.svg" alt="Linkedin" width="24" height="24" />
+			<img src="/svg/LinkedIn.svg" alt="Linkedin" />
 		</a>
 		<a href="https://github.com/chrlee" target="_blank" rel="noopener noreferrer nofollow">
-			<img src="/svg/github-mark.svg" alt="GitHub" width="24" height="24" />
+			<img src="/svg/github-mark.svg" alt="GitHub" />
 		</a>
+	</div>
+	<div class="canvasContainer">
+		<Canvas>
+			<Scene />
+		</Canvas>
 	</div>
 </footer>
 
 <style>
 	footer {
-		position: relative;
 		display: flex;
 		width: 100%;
+		justify-content: space-between;
+		padding-bottom: 1rem;
+	}
+
+	a, img {
+		width: 1.5rem;
+		height: 1.5rem;
 	}
 	.linksContainer {
-		position: absolute;
 		display: flex;
-		gap: 0.5rem;
-		bottom: 0;
-		margin-bottom: 1rem;
+		gap: 0.8rem;
+		align-items: center;
+	}
+	.canvasContainer {
+		width: 2rem;
+		height: 2rem;
 	}
 
 </style>

@@ -7,6 +7,7 @@
   
   export let aspectRatio: string = "4/3";
   export let tags: string[] = [];
+  export let atf: boolean = false;
   
   const isExternalLink = linkUrl.startsWith('http://') || linkUrl.startsWith('https://');
   
@@ -29,7 +30,7 @@
       <img 
         src={imageUrl} 
         {alt} 
-        loading="lazy" 
+        loading={atf ? "eager" : "lazy"} 
         itemprop="image"
       />
     </div>

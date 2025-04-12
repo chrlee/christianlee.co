@@ -4,7 +4,7 @@
   import { OrbitControls } from '@threlte/extras';
 </script>
 
-<T.PerspectiveCamera makeDefault position={[5, 0, 5]}>
+<T.PerspectiveCamera makeDefault position={[2.5, 0, 2.5]}>
   <OrbitControls
     target={[0, 0, 0]}
     enableZoom={false}
