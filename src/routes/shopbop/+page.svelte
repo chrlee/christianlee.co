@@ -4,6 +4,8 @@
   import ShopbopDI from '$lib/assets/projects/Shopbop_DI.webp';
   import ShopbopMH from '$lib/assets/projects/Shopbop_MH.webp';
   import ShopbopEditorial from '$lib/assets/projects/Shopbop_Editorial.webp';
+  import ShopbopPrime from '$lib/assets/projects/Shopbop_Prime.webp';
+  import ShopbopFiltering from '$lib/assets/projects/Shopbop_Filtering.webp';
   import type { Project } from "$lib/types";
   import PortfolioPage from "../../components/PortfolioPage.svelte";
 
@@ -35,6 +37,20 @@
           imageUrl: ShopbopEditorial,
           linkUrl: "#", 
           tags: ["Page Coming Soon"],
+      },
+      {
+        title: "Prime Shipping Integration",
+        description: "Product detail and cart page Amazon Prime shipping & fulfillment",
+        imageUrl: ShopbopPrime,
+        linkUrl: "#",
+        tags: ["Page Coming Soon"],
+      },
+      {
+        title: "Product Status Filtering",
+        description: "Filtering products by style, color, and size based on inventory and merchandising status in user carts",
+        imageUrl: ShopbopFiltering,
+        linkUrl: "#",
+        tags: ["Page Coming Soon"],
       },
   ];
 

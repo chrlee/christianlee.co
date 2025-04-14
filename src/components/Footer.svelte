@@ -24,7 +24,7 @@
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
-		padding-bottom: 1rem;
+		padding: 1rem 0;
 	}
 
 	a, img {

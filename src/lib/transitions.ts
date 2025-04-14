@@ -1,7 +1,7 @@
 import { cubicIn, cubicOut } from 'svelte/easing';
 
-const duration = 300;
-const delay = duration + 100;
+const duration = 100;
+const delay = duration;
 const y = 10;
 
 export const transitionIn = { easing: cubicOut, y, duration, delay };

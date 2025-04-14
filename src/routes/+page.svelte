@@ -28,7 +28,7 @@
       title: "Noise Console",
       description: "Multidimensional visualizations of mathematical noise",
       imageUrl: NoiseConsoleLogo,
-      linkUrl: "https://noise-console.vercel.app/",
+      linkUrl: "https://noise.christianlee.co/",
     }
   ];
 </script>
@@ -39,3 +39,9 @@
 	If you'd like to get in touch, feel free to <a href="mailto:christianjslee@gmail.com">reach out</a
 	>.
 </p>
+
+<style>
+  p {
+    margin-bottom: 0;
+  }
+</style>
