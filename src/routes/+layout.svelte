@@ -1,20 +1,30 @@
 <script lang="ts">
 	import Head from '../components/Head.svelte';
-  import Header from '../components/Header.svelte';
-	import { onMount } from 'svelte';
+	import Header from '../components/Header.svelte';
 	import { fade } from 'svelte/transition';
-  import { transitionIn, transitionOut } from '$lib/transitions';
+	import { transitionIn, transitionOut } from '$lib/transitions';
 	import Footer from '../components/Footer.svelte';
+	import { page } from '$app/state';
+	import { darkTheme } from '$lib/stores/theme';
 
-	export let data;
+	const darkThemeRoutes = ['noise'];
+	
+	const currentPath = $derived(page.url.pathname.replace('/', ''));
+	const isDarkTheme = $derived(darkThemeRoutes.some(route => 
+		currentPath.startsWith(`${route}`)
+	));
 
-	$: currentPath = data.pathname.replace('/', '');
-
-	onMount(() => {
-		currentPath = window.location.pathname.replace('/', '');
-	});
+	$effect(() =>{
+		if (typeof document !== 'undefined') {
+			if (isDarkTheme) {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+			}
+		}
+    $darkTheme = isDarkTheme;
+	})
 </script>
-
 <Head title={currentPath || 'home'} description={currentPath || 'home'}/>
 
 <div class="pageWrapper">
@@ -47,14 +57,27 @@
     src: url('../fonts/NebulaSans-Semibold.woff2');
   }
 
+  /* Theme variables */
+  :global(:root) {
+    --background-color: #F9F9F9;
+    --text-color: #222;
+    --link-hover-color: #00E;
+  }
+
+  :global(html.dark) {
+    --background-color: #121212;
+    --text-color: #E0E0E0;
+    --link-hover-color: #88F;
+  }
+
 	:global(html) {
     height: 100%;
 		width: 100%;
 	}
 	:global(body) {
 		font-family: NebulaSansLight, Helvetica, sans-serif;
-		color: #222;
-		background-color: #F9F9F9;
+		color: var(--text-color);
+		background-color: var(--background-color);
     width: 100%;
 		min-height: 100%; 
 		line-height: 1.4;
@@ -70,9 +93,9 @@
     letter-spacing: 0.1rem;
   }
   :global(a) {
-		color: #222;
+		color: var(--text-color);
     &:hover {
-     color: #00E;
+     color: var(--link-hover-color);
     }
 	}
 	main {

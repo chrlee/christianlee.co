@@ -58,6 +58,6 @@
 	}
 	
 	.clickable:hover {
-		color: #00E;
+		color: var(--link-hover-color);
 	}
 </style>

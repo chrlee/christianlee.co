@@ -1,6 +1,6 @@
 <script>
 	import { T } from '@threlte/core';
-	import Star from '$lib/star.svelte';
+	import Star from './star.svelte';
   import { OrbitControls } from '@threlte/extras';
 </script>
 
