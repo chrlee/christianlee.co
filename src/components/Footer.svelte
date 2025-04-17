@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Canvas } from "@threlte/core";
 	import Scene from "../components/Scene.svelte";
+	import { darkTheme } from "$lib/stores/theme";
 </script>
 
 <footer>
@@ -9,7 +10,7 @@
 			<img src="/svg/LinkedIn.svg" alt="Linkedin" />
 		</a>
 		<a href="https://github.com/chrlee" target="_blank" rel="noopener noreferrer nofollow">
-			<img src="/svg/github-mark.svg" alt="GitHub" />
+			<img src="/svg/github-mark.svg" alt="GitHub" class:dark-github={$darkTheme} />
 		</a>
 	</div>
 	<div class="canvasContainer">
@@ -39,6 +40,10 @@
 	.canvasContainer {
 		width: 2rem;
 		height: 2rem;
+	}
+
+	:global(.dark-github) {
+		filter: brightness(0) invert(0.9);
 	}
 
 </style>
