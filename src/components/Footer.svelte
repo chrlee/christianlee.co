@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { Canvas } from "@threlte/core";
 	import Scene from "../components/Scene.svelte";
-
-	export let isDarkTheme = false;
 </script>
 
 <footer>
