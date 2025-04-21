@@ -67,7 +67,7 @@
           Product Detail Page, Designer Index, Cart, and Orders page.
       </p>
       <p>
-          <a href="shopbop.com" target="_blank" rel="noopener noreferrer">Check out and shop on the website here.</a>
+          <a href="https://www.shopbop.com" target="_blank" rel="noopener noreferrer">Check out and shop on the website here.</a>
       </p>
   </svelte:fragment>
   <img 
