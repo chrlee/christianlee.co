@@ -10,7 +10,7 @@
       title: "Shopbop",
       description: "An Amazon subsidiary focused on luxury fashion e-commerce",
       imageUrl: ShopbopLogo,
-      linkUrl: "/shopbop",
+      linkUrl: "/projects/shopbop",
     },
     {
       title: "Amazon",
@@ -22,7 +22,7 @@
       title: "perlin noise",
       description: "Rare, archival menswear",
       imageUrl: PnLogo,
-      linkUrl: "https://perlin-noise.com/",
+      linkUrl: "/projects/perlin-noise",
     },
     {
       title: "Noise Console",

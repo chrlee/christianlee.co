@@ -7,7 +7,7 @@
   import ShopbopPrime from '$lib/assets/projects/Shopbop_Prime.webp';
   import ShopbopFiltering from '$lib/assets/projects/Shopbop_Filtering.webp';
   import type { Project } from "$lib/types";
-  import PortfolioPage from "../../components/PortfolioPage.svelte";
+  import PortfolioPage from "../../../components/PortfolioPage.svelte";
 
   const projects: Project[] = [
       {
@@ -67,7 +67,7 @@
           Product Detail Page, Designer Index, Cart, and Orders page.
       </p>
       <p>
-          <a href="https://www.shopbop.com" target="_blank" rel="noopener noreferrer">Check out and shop on the website here.</a>
+          <a href="https://www.shopbop.com" target="_blank" rel="noopener noreferrer nofollow">Check out and shop on the website here.</a>
       </p>
   </svelte:fragment>
   <img 
