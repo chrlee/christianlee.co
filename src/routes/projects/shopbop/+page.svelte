@@ -8,6 +8,16 @@
   import ShopbopFiltering from '$lib/assets/projects/Shopbop_Filtering.webp';
   import type { Project } from "$lib/types";
   import PortfolioPage from "../../../components/PortfolioPage.svelte";
+  import { onMount, onDestroy } from 'svelte';
+  import { subHeader } from "$lib/stores/subHeader";
+
+  onMount(() => {
+      $subHeader = "Shopbop";
+  });
+
+  onDestroy(() => {
+      $subHeader = '';
+  });
 
   const projects: Project[] = [
       {

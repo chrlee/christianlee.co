@@ -3,6 +3,16 @@
   import PnGrailed from "$lib/assets/PnGrailed.webp";
   import type { Project } from "$lib/types";
   import PortfolioPage from "../../../components/PortfolioPage.svelte";
+  import { onMount, onDestroy } from 'svelte';
+  import { subHeader } from "$lib/stores/subHeader";
+  
+    onMount(() => {
+        $subHeader = "perlin noise";
+    });
+
+    onDestroy(() => {
+        $subHeader = '';
+    });
 
   const projects: Project[] = [
       {

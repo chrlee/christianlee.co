@@ -73,7 +73,9 @@
 	:global(html) {
     height: 100%;
 		width: 100%;
+    scrollbar-gutter: stable;
 	}
+
 	:global(body) {
 		font-family: NebulaSansLight, Helvetica, sans-serif;
 		color: var(--text-color);
@@ -84,20 +86,24 @@
 		font-size: medium;
     margin: 0;
 	}
+
   :global(h1) {
     font-family: NebulaSansRegular, Helvetica, sans-serif;
     letter-spacing: 0.1rem;
   }
+
   :global(h2) {
     font-family: NebulaSansLight, Helvetica, sans-serif;
     letter-spacing: 0.1rem;
   }
+
   :global(a) {
 		color: var(--text-color);
     &:hover {
      color: var(--link-hover-color);
     }
 	}
+  
 	main {
 		flex-grow: 1;
     height: max-content;
@@ -108,6 +114,7 @@
     width: 100%;
 		height: 100%;
 	}
+
   .pageContent {
     display: flex;
     flex-direction: column;
