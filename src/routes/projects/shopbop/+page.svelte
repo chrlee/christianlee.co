@@ -7,7 +7,7 @@
   import ShopbopPrime from '$lib/assets/projects/Shopbop_Prime.webp';
   import ShopbopFiltering from '$lib/assets/projects/Shopbop_Filtering.webp';
   import type { Project } from "$lib/types";
-  import PortfolioPage from "../../../components/PortfolioPage.svelte";
+  import PortfolioPage from "../../../components/PortfolioPage/PortfolioPage.svelte";
   import { onMount, onDestroy } from 'svelte';
   import { subHeader } from "$lib/stores/subHeader";
 
@@ -24,43 +24,31 @@
           title: "Product Detail Page Redesign",
           description: "Frontend lead for a full redesign of the product detail page",
           imageUrl: ShopbopPDP,
-          linkUrl: "#",
-          tags: ["Page Coming Soon"],
       },
       {
           title: "Designer Index Page",
           description: "Migrated the designers page to a modern React tech stack",
           imageUrl: ShopbopDI,
-          linkUrl: "#", 
-          tags: ["Page Coming Soon"],
       },
       {
           title: "Product Listing Page Mastheads",
           description: "SEO focused mastheads on product browse pages",
           imageUrl: ShopbopMH,
-          linkUrl: "#", 
-          tags: ["Page Coming Soon"],
       },
       {
           title: "Homepage Carousels",
           description: "Editorial product carousels on the homepage",
           imageUrl: ShopbopEditorial,
-          linkUrl: "#", 
-          tags: ["Page Coming Soon"],
       },
       {
         title: "Prime Shipping Integration",
         description: "Product detail and cart page Amazon Prime shipping & fulfillment",
         imageUrl: ShopbopPrime,
-        linkUrl: "#",
-        tags: ["Page Coming Soon"],
       },
       {
         title: "Product Status Filtering",
         description: "Filtering products by style, color, and size based on inventory and merchandising status in user carts",
         imageUrl: ShopbopFiltering,
-        linkUrl: "#",
-        tags: ["Page Coming Soon"],
       },
   ];
 
@@ -69,6 +57,7 @@
 <PortfolioPage
   head={{ title: "shopbop", description: "christian lee at shopbop"}}
   projects={projects}
+  projectsHeader={"Selected Works"}
 >
   <svelte:fragment slot="text">
       <p>
@@ -80,10 +69,10 @@
           <a href="https://www.shopbop.com" target="_blank" rel="noopener noreferrer nofollow">Check out and shop on the website here.</a>
       </p>
   </svelte:fragment>
-  <img 
+  <img
       slot="image"
-      src={ShopbopLogo} 
-      alt="Shopbop" 
+      src={ShopbopLogo}
+      alt="Shopbop"
       class="intro-image"
       width="400"
       height="400"

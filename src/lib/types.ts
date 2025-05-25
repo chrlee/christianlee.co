@@ -2,10 +2,11 @@ export type Project = {
     title: string;
     description: string;
     imageUrl: string;
-    linkUrl: string;
+    linkUrl?: string;
     alt?: string;
     aspectRatio?: string;
     tags?: string[];
+    imageBackground?: string;
 };
 
 export type HeadProps = {

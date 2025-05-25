@@ -1,5 +1,5 @@
 <script>
-  import PortfolioGrid from '../components/PortfolioGrid.svelte';
+  import PortfolioGrid from '../components/PortfolioPage/PortfolioGrid.svelte';
   import ShopbopLogo from '$lib/assets/logos/Shopbop.webp';
   import PnLogo from '$lib/assets/logos/Perlin_Noise.webp';
   import AmazonLogo from '$lib/assets/logos/Amazon.webp';
@@ -16,7 +16,7 @@
       title: "Amazon",
       description: "Search, Ads, and FinTech",
       imageUrl: AmazonLogo,
-      linkUrl: "https://www.amazon.com/",
+      linkUrl: "/projects/amazon",
     },
     {
       title: "perlin noise",

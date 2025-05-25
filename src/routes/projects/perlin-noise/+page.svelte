@@ -2,10 +2,10 @@
   import PnLogo from "$lib/assets/logos/Perlin_Noise.webp";
   import PnGrailed from "$lib/assets/PnGrailed.webp";
   import type { Project } from "$lib/types";
-  import PortfolioPage from "../../../components/PortfolioPage.svelte";
+  import PortfolioPage from "../../../components/PortfolioPage/PortfolioPage.svelte";
   import { onMount, onDestroy } from 'svelte';
   import { subHeader } from "$lib/stores/subHeader";
-  
+
     onMount(() => {
         $subHeader = "perlin noise";
     });
@@ -25,7 +25,7 @@
           title: "Archive Page",
           description: "Original GatsbyJS implementation of the page",
           imageUrl: PnLogo,
-          linkUrl: "https://6357377503d4f80008e69666--perlin-noise.netlify.app/", 
+          linkUrl: "https://6357377503d4f80008e69666--perlin-noise.netlify.app/",
       },
   ];
 
@@ -34,6 +34,7 @@
 <PortfolioPage
   head={{ title: "perlin noise", description: "perlin noise men's archive fashion project overview"}}
   projects={projects}
+  projectsHeader={"Selected Works"}
 >
   <svelte:fragment slot="text">
       <p>
@@ -44,10 +45,10 @@
           <a href="https://perlin-noise.com" target="_blank" rel="noopener noreferrer nofollow">Check out and shop on the website here. (In Progress)</a>
       </p>
   </svelte:fragment>
-  <img 
+  <img
       slot="image"
-      src={PnLogo} 
-      alt="Shopbop" 
+      src={PnLogo}
+      alt="Shopbop"
       class="intro-image"
       width="400"
       height="400"

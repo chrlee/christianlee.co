@@ -1,24 +1,25 @@
 <script lang="ts">
   import PortfolioTile from './PortfolioTile.svelte';
   import type { Project } from '$lib/types';
-  
+
   export let projects: Project[] = [];
   export let atf: boolean = false;
 </script>
 
 <section aria-labelledby="portfolio-heading">
   <h2 id="portfolio-heading" class="visually-hidden">Portfolio Projects</h2>
-  
+
   <div class="portfolio-grid" role="list">
     {#each projects as project, i}
       <div class="portfolio-item" role="listitem" tabindex="-1">
-        <PortfolioTile 
+        <PortfolioTile
           title={project.title}
           description={project.description}
           imageUrl={project.imageUrl}
           linkUrl={project.linkUrl}
           alt={project.alt || project.title}
           aspectRatio={project.aspectRatio || "4/3"}
+          imageBackground={project.imageBackground || "transparent"}
           tags={project.tags || []}
           atf={atf}
         />
@@ -34,7 +35,7 @@
     gap: 1.5rem;
     width: 100%;
   }
-  
+
   .portfolio-item {
     height: 100%;
     outline: none;
@@ -51,7 +52,7 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
-  
+
   .visually-hidden {
     position: absolute;
     width: 1px;
