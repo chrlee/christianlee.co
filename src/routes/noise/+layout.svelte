@@ -11,7 +11,6 @@
      previousPage = from?.url.pathname || previousPage;
      currentPage = $page.url.pathname;
 
-     // Clear subHeader if navigating away from a noise route
      if (!currentPage.startsWith('/noise')) {
        $subHeader = '';
      }
@@ -36,63 +35,6 @@
 </div>
 
 <style>
-  @import '/reset.css';
-
-  @font-face {
-    font-family: NebulaSansLight;
-    src: url('/fonts/NebulaSans-Light.woff2');
-  }
-
-  @font-face {
-    font-family: NebulaSansRegular;
-    src: url('/fonts/NebulaSans-Medium.woff2');
-  }
-
-  @font-face {
-    font-family: NebulaSansBold;
-    src: url('/fonts/NebulaSans-Semibold.woff2');
-  }
-
-  :global(:root) {
-    color-scheme: dark;
-  }
-  
-  :global(html, body) {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #121212;
-    font-family: NebulaSansLight, -apple-system, -apple-system,  
-                BlinkMacSystemFont, 'Segoe UI', Roboto,  
-                Oxygen, Ubuntu, Cantarell, 'Open Sans',  
-                'Helvetica Neue', sans-serif; 
-  }
-
-  :global(h1, h2, h3, h4, h5) {
-    font-family: NebulaSansRegular, -apple-system, -apple-system,  
-                BlinkMacSystemFont, 'Segoe UI', Roboto,  
-                Oxygen, Ubuntu, Cantarell, 'Open Sans',  
-                'Helvetica Neue', sans-serif; 
-  }
-
-  .container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: none;
-  }
-
-  .container > :global(h1), :global(h2), :global(h3),
-    :global(p), :global(a) {
-    margin: 1rem;
-  }
-
-  .container > .back-button {
-    z-index: 1;
-  }
-
   :global(a) {
     color: #fff;
     text-decoration: underline;
