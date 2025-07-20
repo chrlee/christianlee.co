@@ -39,9 +39,7 @@
 
 <T.PerspectiveCamera
   makeDefault
-  on:create={({ ref }) => {
-    ref.position.set(20, 20, 20)
-  }}
+  position={[20, 20, 20]}
 >
   <OrbitControls
     autoRotate={false}

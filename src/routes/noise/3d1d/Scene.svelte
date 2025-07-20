@@ -45,9 +45,16 @@ import { useTask } from '@threlte/core';
   }
 </script>
 
-
-
-
+<T.PerspectiveCamera
+  makeDefault
+  position={[20, 20, 20]}
+>
+  <OrbitControls
+    autoRotate={false}
+    enableDamping
+    target={[0, 0, 0]}
+  />
+</T.PerspectiveCamera>
 
 <T.Mesh {geometry} rotation={[-Math.PI / 2, 0, 0]}>
   <T.MeshBasicMaterial

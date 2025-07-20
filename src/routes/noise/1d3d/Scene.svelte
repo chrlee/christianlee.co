@@ -39,14 +39,11 @@
 
 <T.PerspectiveCamera
   makeDefault
-  on:create={({ ref }) => {
-    ref.position.set(20, 20, 20)
-  }}
+  position={[20, 20, 20]}
 >
   <OrbitControls
-    autoRotate={false}
     enableDamping
-    target={[0, 0, 0]}
+    target={[0, 8, 0]}
   />
 </T.PerspectiveCamera>
 
