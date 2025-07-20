@@ -7,23 +7,29 @@
 	import { page } from '$app/state';
 	import { darkTheme } from '$lib/stores/theme';
 
+	import { afterNavigate } from '$app/navigation';
+
 	const darkThemeRoutes = ['noise'];
 	
-	const currentPath = $derived(page.url.pathname.replace('/', ''));
-	const isDarkTheme = $derived(darkThemeRoutes.some(route => 
-		currentPath.startsWith(`${route}`)
-	));
+	let currentPath = page.url.pathname.replace('/', '');
 
-	$effect(() =>{
+	afterNavigate(() => {
+		currentPath = page.url.pathname.replace('/', '');
+		const shouldBeDark = darkThemeRoutes.some(route => 
+			currentPath.startsWith(`${route}`)
+		);
+
 		if (typeof document !== 'undefined') {
-			if (isDarkTheme) {
+			if (shouldBeDark) {
 				document.documentElement.classList.add('dark');
+				console.log('Added dark class. html classList:', document.documentElement.classList);
 			} else {
 				document.documentElement.classList.remove('dark');
+				
 			}
 		}
-    $darkTheme = isDarkTheme;
-	})
+		$darkTheme = shouldBeDark;
+	});
 </script>
 <Head title={currentPath || 'home'} description={currentPath || 'home'}/>
 

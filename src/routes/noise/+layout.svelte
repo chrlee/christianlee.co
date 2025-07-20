@@ -36,7 +36,6 @@
 
 <style>
   :global(a) {
-    color: #fff;
     text-decoration: underline;
     cursor: pointer;
   }

@@ -39,7 +39,7 @@
 
 <T.PerspectiveCamera
   makeDefault
-  position={[20, 20, 20]}
+  position={[15, 15, 15]}
 >
   <OrbitControls
     autoRotate={false}

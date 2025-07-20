@@ -28,7 +28,7 @@
       title: "Noise Console",
       description: "Multidimensional visualizations of mathematical noise",
       imageUrl: NoiseConsoleLogo,
-      linkUrl: "https://noise.christianlee.co/",
+      linkUrl: "/noise",
     },
   ];
 </script>

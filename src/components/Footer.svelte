@@ -7,7 +7,7 @@
 <footer>
 	<div class="linksContainer">
 		<a href="https://linkedin.com/in/cjle" target="_blank" rel="noopener noreferrer nofollow">
-			<img src="/svg/LinkedIn.svg" alt="Linkedin" />
+			<img src="/svg/LinkedIn.svg" alt="Linkedin" class:dark-linkedin={$darkTheme} />
 		</a>
 		<a href="https://github.com/chrlee" target="_blank" rel="noopener noreferrer nofollow">
 			<img src="/svg/github-mark.svg" alt="GitHub" class:dark-github={$darkTheme} />
@@ -44,6 +44,10 @@
 
 	:global(.dark-github) {
 		filter: brightness(0) invert(0.9);
+	}
+
+	:global(.dark-linkedin) {
+		filter: invert(1) grayscale(1) brightness(1.6);
 	}
 
 </style>
