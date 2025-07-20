@@ -32,15 +32,19 @@
 </div>
 
 <style>
-  div {
-    margin: 1rem;
-  }
-  
-  h1 {
-    margin: 1rem;
+  p {
+    margin: 0 0 1.5rem 0;
   }
 
   h2 {
-    margin: 2rem 1rem;
+    margin: 2.5rem 0 1rem 0;
+  }
+
+  h3 {
+    margin: 1.5rem 0 0.5rem 0;
+  }
+
+  ul {
+    margin: 0 0 2rem 0;
   }
 </style>

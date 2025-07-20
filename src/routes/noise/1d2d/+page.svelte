@@ -25,6 +25,13 @@
 
 <style>
   canvas {
-    height: 100%;
+    width: 100%;
+    min-height: 400px;
+    padding: 2rem 0;
+    display: block;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
   }
 </style>

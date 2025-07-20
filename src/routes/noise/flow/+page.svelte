@@ -7,7 +7,4 @@
 
 <style>
   /* Add any route-specific styles here */
-  :global(body) {
-    overflow: hidden; /* Prevent scrollbars */
-  }
 </style>

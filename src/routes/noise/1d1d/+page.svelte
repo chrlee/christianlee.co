@@ -36,7 +36,7 @@ Different interpolation functions can be used to achieve varying aesthetic resul
 
 
 <style>
-  :global(canvas) {
+  canvas {
     width: 100%;
     padding: 2rem 0;
     display: block;

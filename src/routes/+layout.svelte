@@ -114,17 +114,18 @@
 	}
 
 	.pageWrapper {
-    position: absolute;
-    width: 100%;
-		height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 	}
 
   .pageContent {
+    flex: 1;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    height: 100%;
     padding: 0 1rem;
     max-width: 1024px;
+    width: 100%;
   }
 </style>
