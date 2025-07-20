@@ -13,6 +13,8 @@
 
      if (!currentPage.startsWith('/noise')) {
        $subHeader = '';
+     } else {
+       $subHeader = 'Noise Console';
      }
   }) 
 

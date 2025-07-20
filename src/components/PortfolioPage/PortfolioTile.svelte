@@ -53,6 +53,7 @@
     text-decoration: none;
     color: #222;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
   }

@@ -1,8 +1,4 @@
-<script lang="ts">
-  import { subHeader } from '$lib/stores/subHeader';
 
-  $subHeader = 'Noise Console';
-</script>
 
 <div>
 

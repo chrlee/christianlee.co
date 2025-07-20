@@ -1,8 +1,6 @@
 <script lang="ts">
 	import Head from '../components/Head.svelte';
 	import Header from '../components/Header.svelte';
-	import { fade } from 'svelte/transition';
-	import { transitionIn, transitionOut } from '$lib/transitions';
 	import Footer from '../components/Footer.svelte';
 	import { page } from '$app/state';
 	import { darkTheme } from '$lib/stores/theme';
@@ -11,7 +9,8 @@
 
 	const darkThemeRoutes = ['noise'];
 	
-	let currentPath = page.url.pathname.replace('/', '');
+		let currentPath = page.url.pathname.replace('/', '');
+	
 
 	afterNavigate(() => {
 		currentPath = page.url.pathname.replace('/', '');
@@ -22,11 +21,10 @@
 		if (typeof document !== 'undefined') {
 			if (shouldBeDark) {
 				document.documentElement.classList.add('dark');
-				console.log('Added dark class. html classList:', document.documentElement.classList);
+				
 			} else {
 				document.documentElement.classList.remove('dark');
-				
-			}
+}
 		}
 		$darkTheme = shouldBeDark;
 	});
@@ -37,7 +35,7 @@
   <div class="pageContent">
     <Header currentPath={currentPath}/>
     {#key currentPath}
-      <main in:fade={transitionIn} out:fade={transitionOut} class="pageMain">
+      <main class="pageMain">
         <slot />
       </main>
     {/key}
