@@ -18,9 +18,6 @@ export default {
     prerender: {
       handleHttpError: 'warn',
     },
-    paths: {
-      base: dev ? '' : '/christianlee.co'
-    }
 	},
 	extensions: ['.svelte', '.md'],
 	preprocess: [
