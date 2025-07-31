@@ -2,6 +2,8 @@ import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 
+const dev = process.env.NODE_ENV === 'development';
+
 export default {
 	kit: {
 		adapter: adapter({
@@ -15,6 +17,9 @@ export default {
 		}),
     prerender: {
       handleHttpError: 'warn',
+    },
+    paths: {
+      base: dev ? '' : '/christianlee.co'
     }
 	},
 	extensions: ['.svelte', '.md'],
