@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [master] 
+    branches: [master] # Change to your default branch if different
 
 jobs:
   build-and-deploy:
@@ -12,27 +12,31 @@ jobs:
       pages: write
       id-token: write
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
-      - name: Install Node.js
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9 # Set your desired pnpm version
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: npm
+          node-version: 20 # or your Node version
+          cache: pnpm
+
       - name: Install dependencies
-        run: npm install
-      - name: Build
-        env:
-          BASE_PATH: "/${{ github.event.repository.name }}"
-        run: npm run build
+        run: pnpm install
+
+      - name: Build site
+        run: pnpm build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'build/'
-      - name: Deploy
+          path: 'build' # SvelteKit's default output for static adapter
+
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-        id: deployment
-        with:
-          # required for pages deployment, see docs
-          branch: gh-pages
 
