@@ -1,22 +1,20 @@
 <script lang="ts">
-  import { goto, afterNavigate } from '$app/navigation';
+  import { goto } from '$app/navigation';
   import { page } from '$app/stores';
   import { base } from '$app/paths';
   import { subHeader } from '$lib/stores/subHeader';
+	import { onDestroy, onMount } from 'svelte';
 
   let currentPage : string = $page.url.pathname;
   let previousPage : string = base;
 
-  afterNavigate(({from}) => {
-     previousPage = from?.url.pathname || previousPage;
-     currentPage = $page.url.pathname;
+  onMount(() => {
+    $subHeader = 'Noise Console';
+  });
 
-     if (!currentPage.startsWith('/noise')) {
-       $subHeader = '';
-     } else {
-       $subHeader = 'Noise Console';
-     }
-  }) 
+  onDestroy(() => {
+    $subHeader = '';
+  });
 
 </script>
 
