@@ -4,6 +4,7 @@
 </script>
 
 <h1>3D Visualization of 1D Noise</h1>
+<p>3 output dimensions (x, y, z) are derived from a single input dimension (time). Each point is placed in a 3D space and interpolated between to the next point in time.</p>
 <div>
   <Canvas>
     <Scene />

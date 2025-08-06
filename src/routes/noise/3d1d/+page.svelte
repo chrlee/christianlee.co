@@ -4,6 +4,7 @@
 </script>
 
 <h1>3D Visualization of 3D Noise</h1>
+<p>1 output dimension (y) is derived from 3 input dimensions, x, z, and a gradient calculation at each point based on surrounding values. Each point is interpolated to all surrounding points, creating a terrain-like grid. This noise is also known as perlin noise, and often used in procedural generation algorithms.</p> 
 <div>
   <Canvas>
     <Scene />

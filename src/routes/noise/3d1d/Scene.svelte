@@ -1,6 +1,5 @@
 <script lang="ts">
   import { T } from '@threlte/core';
-import { useTask } from '@threlte/core';
   import { Grid, OrbitControls } from '@threlte/extras';
   import { Color, PlaneGeometry } from 'three';
   import noise from '$lib/noise/noise/perlin';
