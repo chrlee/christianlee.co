@@ -10,7 +10,7 @@
   <h2 id="portfolio-heading" class="visually-hidden">Portfolio Projects</h2>
 
   <div class="portfolio-grid" role="list">
-    {#each projects as project, i}
+    {#each projects as project}
       <div class="portfolio-item" role="listitem" tabindex="-1">
         <PortfolioTile
           title={project.title}
